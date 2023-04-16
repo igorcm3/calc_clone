@@ -8,6 +8,26 @@ button{
   margin: 5px;
 }
 
+button:hover {
+  background-color: #252525;
+}
+
+button:active {
+  background-color: #121711;
+}
+
 .number {
   color: #FFF;
+}
+
+.clean {
+  color: #f06d68;
+}
+
+.func {
+  color: #78d53e;
+}
+
+.equalsBtn{
+  background-color: #2b840c;
 }

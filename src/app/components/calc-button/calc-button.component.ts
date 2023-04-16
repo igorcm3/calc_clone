@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-calc-button',
@@ -12,5 +12,13 @@ export class CalcButtonComponent {
 
   @Input()
   buttonType: string | undefined;
+
+  @Output() btnClicked = new EventEmitter<string>();
+
+
+  handleClick(){
+    console.log(`botão ${this.text} clicado`);
+    this.btnClicked.emit(this.text);
+  }
 
 }
