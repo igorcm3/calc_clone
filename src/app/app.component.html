@@ -1,6 +1,10 @@
 <div class="container">
-      <app-input-view #input_view/>
-      <app-result-view />
+<!--      <app-input-view />-->
+  <div class="active-input">
+      <input type="text" #inputView [(ngModel)]="testValue" (keydown)="handleKeyDown($event)">
+        {{ inputView.focus() }}
+      </div>
+      <app-result-view [result] = "result"/>
       <app-toolset />
        <div class="container-buttons">
         <app-calc-button (btnClicked)="btnClicked($event)" buttonType="clean" text="C" />

@@ -15,9 +15,7 @@ export class CalcButtonComponent {
 
   @Output() btnClicked = new EventEmitter<string>();
 
-
   handleClick(){
-    console.log(`botão ${this.text} clicado`);
     this.btnClicked.emit(this.text);
   }
 
